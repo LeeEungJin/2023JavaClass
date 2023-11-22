@@ -39,24 +39,26 @@ public class JavaClassSecondhomework {
 			}
 		}
 		
-		if (my_kwb_num == 0) {
-			my_kwb = "가위";
-		}
-		else if (my_kwb_num == 1) {
-			my_kwb = "바위";
-		}
-		else {
-			my_kwb = "보";
+		switch(com_kwb_num) {
+		case 0:
+			com_kwb = "가위";
+			break;
+		case 1:
+			com_kwb = "바위";
+			break;
+		case 2:
+			com_kwb = "보";
 		}
 		
-		if (com_kwb_num == 0) {
-			com_kwb = "가위";
-		}
-		else if (com_kwb_num == 1) {
-			com_kwb = "바위";
-		}
-		else {
-			com_kwb = "보";
+		switch(my_kwb_num) {
+		case 0:
+			my_kwb = "가위";
+			break;
+		case 1:
+			my_kwb = "바위";
+			break;
+		case 2:
+			my_kwb = "보";
 		}
 		
 		System.out.println("컴퓨터 : " + com_kwb);

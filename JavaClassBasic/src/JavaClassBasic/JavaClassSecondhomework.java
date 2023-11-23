@@ -14,7 +14,7 @@ public class JavaClassSecondhomework {
 
 		int menu = 0;
 		String juge = "";
-		
+
 		String quit = "";
 
 		while (!quit.toUpperCase().equals("Q")) {
@@ -23,10 +23,19 @@ public class JavaClassSecondhomework {
 
 			System.out.println("컴퓨터는 결정했습니다.");
 			System.out.println("당신의 선택은?");
-			System.out.println("1.가위 2.바위 3.보");
 
-			menu = scanner.nextInt();
-			scanner.nextLine();
+			while (true) {
+				System.out.println("1.가위 2.바위 3.보");
+				menu = scanner.nextInt();
+				scanner.nextLine();
+
+				if (menu < 1 || menu > 3 ) {
+					System.out.println("입력이 올바르지 않습니다.");
+					System.out.println("다시 입력하십시오.");
+				} else {
+					break;
+				}
+			}
 
 			my_kwb_num = menu - 1;
 
@@ -68,10 +77,7 @@ public class JavaClassSecondhomework {
 
 			System.out.println("종료하시겠습니까? (Q)\n");
 			quit = scanner.nextLine();
-			if(quit == "q" || quit=="Q") {
-				System.out.println("종료하겠습니다.");
-			}
-			
+
 		}
 
 		scanner.close();

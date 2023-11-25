@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class ShapeTriangle {
 	Scanner scanner = new Scanner(System.in);
 	
-	public float TriangleHight;
-	public float TriangleBase;
-	public float Area;
+	float TriangleHight;
+	float TriangleBase;
+	float Area;
 		
 	public float TriangleArea() {
 		
@@ -20,7 +20,6 @@ public class ShapeTriangle {
 		Area = ((int)((TriangleHight * TriangleBase / 2)*100+5f))/100f;
 		
 		return Area ;
-		
 	}
 	
 

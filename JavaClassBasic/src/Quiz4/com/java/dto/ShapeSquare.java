@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class ShapeSquare {
 	Scanner scanner = new Scanner(System.in);
 	
-	public float SquareHight;
-	public float SquareBase;
-	public float Area;
+	float SquareHight;
+	float SquareBase;
+	float Area;
 	
 	public float SquareArea() {
 		
@@ -20,8 +20,5 @@ public class ShapeSquare {
 		Area = ((int)((SquareHight * SquareBase)*100+5f))/100f;
 		
 		return Area;
-		
-		
 	}
-
 }

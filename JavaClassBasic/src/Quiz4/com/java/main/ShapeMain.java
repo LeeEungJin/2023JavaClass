@@ -11,12 +11,12 @@ public class ShapeMain {
 
 		Scanner scanner = new Scanner(System.in);
 		
-
+		
 		int input = 0;
 		boolean check = true;
 		String quit = "";
 
-		while (check) {
+		do {
 			System.out.println("넓이를 원하는 도형을 입력하시오.");
 			System.out.println("1.삼각형   2.사각형   3.원");
 
@@ -47,8 +47,7 @@ public class ShapeMain {
 			quit = scanner.nextLine();
 
 			switch (quit) {
-			case "Q":
-			case "q":
+			case "Q": case "q":
 				check = false;
 				System.out.println("종료하겠습니다.");
 				break;
@@ -57,8 +56,7 @@ public class ShapeMain {
 				check = true;
 				break;
 			}
-
-		}
+		} while(check);
 
 		scanner.close();
 

@@ -10,6 +10,7 @@ public class ShapeMain {
 	public static void main(String[] args) {
 
 		Scanner scanner = new Scanner(System.in);
+		
 
 		int input = 0;
 		boolean check = true;
@@ -25,21 +26,24 @@ public class ShapeMain {
 			switch (input) {
 			case 1:
 				ShapeTriangle tri = new ShapeTriangle();
-				System.out.println(tri.Triangle());
+				System.out.println("삼각형의 넓이는 : " + tri.TriangleArea());
 				break;
 
 			case 2:
 				ShapeSquare squ = new ShapeSquare();
-				System.out.println(squ.Square());
+				System.out.println("사각형의 넓이는 : " + squ.SquareArea());
 				break;
 
 			case 3:
 				ShapeCircle cir = new ShapeCircle();
-				System.out.println(cir.Circle());
+				System.out.println("원의 넓이는 : " + cir.CircleArea());
 				break;
+			default :
+				System.out.println("잘못 입력하셨습니다.\n");
 			}
 
-			System.out.println("끝내시겠습니까? (Q) 아니면 아무입력이나 하십시오.");
+			System.out.println();
+			System.out.println("끝내시겠습니까? (Q)" + "\n" +"계속하시려면 아무입력이나 하십시오.");
 			quit = scanner.nextLine();
 
 			switch (quit) {
@@ -49,6 +53,7 @@ public class ShapeMain {
 				System.out.println("종료하겠습니다.");
 				break;
 			default:
+				System.out.println("");
 				check = true;
 				break;
 			}

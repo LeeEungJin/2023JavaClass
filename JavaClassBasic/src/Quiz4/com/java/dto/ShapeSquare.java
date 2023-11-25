@@ -3,12 +3,13 @@ package Quiz4.com.java.dto;
 import java.util.Scanner;
 
 public class ShapeSquare {
+	Scanner scanner = new Scanner(System.in);
 	
 	public float SquareHight;
 	public float SquareBase;
+	public float Area;
 	
-	public float Square() {
-		Scanner scanner = new Scanner(System.in);
+	public float SquareArea() {
 		
 		System.out.print("사각형의 높이 : ");
 		SquareHight = scanner.nextFloat();
@@ -16,7 +17,9 @@ public class ShapeSquare {
 		System.out.print("사각형의 밑변 : ");
 		SquareBase = scanner.nextFloat();
 		
-		return SquareHight * SquareBase;
+		Area = ((int)((SquareHight * SquareBase)*100+5f))/100f;
+		
+		return Area;
 		
 		
 	}

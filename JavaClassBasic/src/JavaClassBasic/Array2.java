@@ -36,7 +36,10 @@ public class Array2 {
 			ScoreMat[i] = scanner.nextInt(); scanner.nextLine();
 			System.out.print("과학 : ");
 			ScoreSci[i] = scanner.nextInt(); scanner.nextLine();
+			
 		}
+		
+		System.out.println("정보 입력을 마쳤습니다. \n");
 		
 		for (i = 0; i < StudentTemp ; i++) {
 			StudentNum[i] = i;

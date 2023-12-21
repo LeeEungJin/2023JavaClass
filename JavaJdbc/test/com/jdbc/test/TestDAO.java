@@ -31,21 +31,21 @@ public class TestDAO {
 	
 	//1. public 이어야함.	2. return이 있으면 안댐.	3.이름은 내맘대로	4.결과는 success or fail
 	@Test
-	public void test1() throws Exception{
+	public void test고객리스트() throws Exception{
 		List<고객VO> 고객리스트 = 고객dao.selectList();
 		
 		Assert.assertEquals(7, 고객리스트.size());
 	}
 	
 	@Test
-	public void test2() throws Exception{
+	public void test제품리스트() throws Exception{
 		List<제품VO> 제품리스트 = 제품dao.selectList();
 		
 		Assert.assertEquals(7, 제품리스트.size());
 	}
 	
 	@Test
-	public void test3() throws Exception{
+	public void test주문리스트() throws Exception{
 		List<주문VO> 주문리스트 = 주문dao.selectList();
 		
 		Assert.assertEquals(7, 주문리스트.size());

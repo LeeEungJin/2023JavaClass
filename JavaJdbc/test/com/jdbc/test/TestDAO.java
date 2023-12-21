@@ -27,6 +27,8 @@ public class TestDAO {
 		고객dao.setDataSource(dataSource);
 		제품dao.setDataSource(dataSource);
 		주문dao.setDataSource(dataSource);
+		
+		
 	}
 	
 	//1. public 이어야함.	2. return이 있으면 안댐.	3.이름은 내맘대로	4.결과는 success or fail

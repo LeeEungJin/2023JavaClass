@@ -32,7 +32,7 @@ public class TestDAO {
 	
 	}
 	
-	//1. public 이어야함.	2. return이 있으면 안댐.	3.이름은 내맘대로	4.결과는 success or fail 55
+	//1. public 이어야함.	2. return이 있으면 안댐.	3.이름은 내맘대로	4.결과는 success or fail
 	@Test
 	public void test고객리스트() throws Exception{
 		List<고객VO> 고객리스트 = 고객dao.selectList();

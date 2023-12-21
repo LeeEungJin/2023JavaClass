@@ -14,6 +14,8 @@ import com.jdbc.dto.고객VO;
 import com.jdbc.dto.제품VO;
 import com.jdbc.dto.주문VO;
 
+
+
 public class TestDAO {
 	
 	private DataSource dataSource;
@@ -27,11 +29,10 @@ public class TestDAO {
 		고객dao.setDataSource(dataSource);
 		제품dao.setDataSource(dataSource);
 		주문dao.setDataSource(dataSource);
-		
-		
+	
 	}
 	
-	//1. public 이어야함.	2. return이 있으면 안댐.	3.이름은 내맘대로	4.결과는 success or fail
+	//1. public 이어야함.	2. return이 있으면 안댐.	3.이름은 내맘대로	4.결과는 success or fail 55
 	@Test
 	public void test고객리스트() throws Exception{
 		List<고객VO> 고객리스트 = 고객dao.selectList();

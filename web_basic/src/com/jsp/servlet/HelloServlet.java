@@ -32,7 +32,7 @@ public class HelloServlet extends HttpServlet {
 		out.println("</head>");
 		
 		out.println("<body>");
-		
+		out.println("<h1>method : GET</h1>");
 		out.println("<h1> To : " + who+ "</h1>");
 		out.println("<h1> Message : " +message+"</h1>");
 		out.println("</body>");		
@@ -41,8 +41,58 @@ public class HelloServlet extends HttpServlet {
 	
 	}
 
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		String message = request.getParameter("message");
+		String who = request.getParameter("who");
+		
+		System.out.println(message);
+		System.out.println(who);
+		
+		
+		response.setContentType("text/html;charset=utf-8");
+		PrintWriter out = response.getWriter();
+		out.println("<!DOCTYPE html>");
+		out.println("<html>");
+		out.println("<head>");
+		out.println("<title>Echo message</title>");
+		out.println("</head>");
+		
+		out.println("<body>");
+		out.println("<h1>method : POST</h1>");
+		out.println("<h1> To : " + who+ "</h1>");
+		out.println("<h1> Message : " +message+"</h1>");
+		out.println("</body>");		
+		
+		out.println("</html>");
 	}
 
+	@Override
+	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String message = request.getParameter("message");
+		String who = request.getParameter("who");
+		
+		System.out.println(message);
+		System.out.println(who);
+		
+		
+		response.setContentType("text/html;charset=utf-8");
+		PrintWriter out = response.getWriter();
+		out.println("<!DOCTYPE html>");
+		out.println("<html>");
+		out.println("<head>");
+		out.println("<title>Echo message</title>");
+		out.println("</head>");
+		
+		out.println("<body>");
+		out.println("<h1>method : DELELETE</h1>");
+		out.println("<h1> To : " + who+ "</h1>");
+		out.println("<h1> Message : " +message+"</h1>");
+		out.println("</body>");		
+		
+		out.println("</html>");
+	}
+
+	
+	
 }

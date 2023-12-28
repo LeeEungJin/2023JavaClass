@@ -2,13 +2,20 @@
 
 <web-app>
 	<servlet> <!-- 해당 서블릿 타입명 -->
-		<servlet-name>hello</servlet-name>
-		<servlet-class>com.jsp.servlet.HelloServlet</servlet-class>
+		<servlet-name>lifeCycle</servlet-name>
+		<servlet-class>com.jsp.servlet.LifeCycleServlet</servlet-class>
+		<init-param>			<!-- init 실행문 -->
+			<param-name>path</param-name>
+			<param-value>c:/download</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>	<!-- 늦게 부스팅 걸리는놈을 미리 켜주는 실행문 -->
 	</servlet> 
 
 	<servlet-mapping> <!-- url 기입 -->
-		<servlet-name>hello</servlet-name>
-		<url-pattern>/hello.html</url-pattern>
-	</servlet-mapping> 
+		<servlet-name>lifeCycle</servlet-name>
+		<url-pattern>/life/cycle</url-pattern>
+	</servlet-mapping>
 	
 </web-app>
+
+

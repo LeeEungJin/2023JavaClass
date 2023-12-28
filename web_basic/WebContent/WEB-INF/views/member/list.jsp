@@ -3,6 +3,8 @@
 <%@page import="com.jsp.dto.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,20 +29,24 @@
 			<th>이메일</th>
 			<th>전화번주</th>
 		</tr>
-		<%
+		<%--<%
 			List<MemberVO> memberList = (ArrayList<MemberVO>)request.getAttribute("memberList");
 			if(memberList != null) for(MemberVO member : memberList){
-		%>
-		<tr>
-			<td>${member.id}</td>
-			<td>${member.pwd}</td>
-			<td>${member.name}</td>
-			<td>${member.email}</td>
-			<td>${member.phone}</td>
-		</tr>
-		<%
+		--%>
+		<c:if test="${not empty memberList }">
+			<c:forEach var="member" items="${memberList }">
+				<tr>
+					<td>${member.id}</td>
+					<td>${member.pwd}</td>
+					<td>${member.name}</td>
+					<td>${member.email}</td>
+					<td>${member.phone}</td>
+				</tr>
+			</c:forEach>
+		</c:if>
+		<%--<%
 			}
-		%>
+		--%>
 	</table>
 </body>
 </html>

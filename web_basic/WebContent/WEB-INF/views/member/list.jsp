@@ -36,11 +36,11 @@
 		<c:if test="${not empty memberList }">
 			<c:forEach var="member" items="${memberList }">
 				<tr>
-					<td>${member.id}</td>
-					<td>${member.pwd}</td>
-					<td>${member.name}</td>
-					<td>${member.email}</td>
-					<td>${member.phone}</td>
+					<td>${member.id }</td>
+					<td>${member.pwd }</td>
+					<td>${member.name }</td>
+					<td>${member.email }</td>
+					<td>${member.phone }</td>
 				</tr>
 			</c:forEach>
 		</c:if>
